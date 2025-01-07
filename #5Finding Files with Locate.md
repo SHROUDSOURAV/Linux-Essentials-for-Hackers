@@ -205,3 +205,27 @@ The advantage of locate is that it works fast but the disadvantage is that it is
 /var/lib/dpkg/info/tightvncpasswd.prerm
 ```
 
+As demonstrated above that results produced by using **locate** utility can be hard to filter through so we can use the **piping** along with **grep** command to filter our search for a specific file.
+
+Let's say we are looking for all files with an extension **.txt**. We need to use **--all** switch with **locate** command and use the asterisk symbol before *.txt to search all files having the extension mentioned.
+
+```
+┌──(kali㉿kali)-[~]
+└─$ locate /etc "*.txt"
+/etc/X11/rgb.txt
+/etc/arp-scan/mac-vendor.txt
+/etc/java-17-openjdk/security/policy/README.txt
+/etc/java-23-openjdk/security/policy/README.txt
+/etc/unicornscan/oui.txt
+/etc/unicornscan/ports.txt
+```
+
+If you want to find out the number of matches to our searching criteria use the **-c** switch with **locate** command as shown below.
+
+You can also user **-i** switch with **locate** command to ommit case sensitivity.
+```
+┌──(kali㉿kali)-[~]
+└─$ locate /etc --all -c "*.txt"
+6
+```
+

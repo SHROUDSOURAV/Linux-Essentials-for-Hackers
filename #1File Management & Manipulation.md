@@ -143,7 +143,7 @@ The cd command is used to navigate back and forth the directories of linux . To 
 /home
 ```
 
-To move to the next directory we can do cd <directory_name>. Shortcut to go to home directory --->  cd ~
+To move to the next directory we can do cd (directory_name). Shortcut to go to home directory --->  cd ~
 
 ```
 ┌──(kali㉿kali)-[/home]
